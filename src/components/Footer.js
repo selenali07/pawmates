@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -14,12 +13,12 @@ function Footer() {
           Paw-Mates
             </Link>
           </div>
-          <small class='website-rights'>© 2020 Paw Mates All Rights Reserved</small>
+          <small class='legal'>© 2020 Paw Mates All Rights Reserved</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link github'
               to='/'
-              target='_blank'
+              target=''
               aria-label='Github'
             >
               <i class='fab fa-github' />
@@ -27,7 +26,7 @@ function Footer() {
             <Link
               class='social-icon-link instagram'
               to='/'
-              target='_blank'
+              target=''
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
@@ -35,7 +34,7 @@ function Footer() {
             <Link
               class='social-icon-link youtube'
               to='/'
-              target='_blank'
+              target=''
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
@@ -43,7 +42,7 @@ function Footer() {
             <Link
               class='social-icon-link twitter'
               to='/'
-              target='_blank'
+              target=''
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
@@ -51,7 +50,7 @@ function Footer() {
             <Link
               class='social-icon-link twitter'
               to='/'
-              target='_blank'
+              target=''
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
