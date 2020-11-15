@@ -1,45 +1,28 @@
-@import url('https://rsms.me/inter/inter.css');
-
-html {
-  font-family: 'Inter', sans-serif;
+.App {
+  text-align: center;
 }
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
-.home,
-.matches,
-.list,
-.sign-up .sign-in {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+.App-title {
+  font-size: 1.5em;
 }
 
-.matches {
-  color: #000000;
-  font-size: 100px;
+.App-intro {
+  font-size: large;
 }
 
-.list {
-
-  color: #000000;
-  font-size: 100px;
-}
-
-.sign-up {
-  color: #000000;
-  font-size: 100px;
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
