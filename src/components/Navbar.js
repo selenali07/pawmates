@@ -61,19 +61,16 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <ul> 
-                <button className='nav-links'>View Profile</button>
-                <li>
-                <Link
+              <Link
                 to='/profile'
                 className='nav-links'
                 onClick={closeMobileMenu}
-                >
-                Edit Profile
-                </Link>
-                <button className='nav-links' onClick={() => firebase.auth().signOut()}>Sign out!</button>
-                </li>
-              </ul>
+              >
+                Profile
+              </Link>
+            </li>
+            <li className='nav-item'>
+            <button className='nav-links' onClick={() => firebase.auth().signOut()}>Sign out</button>
             </li>
           </ul>
         </div>
