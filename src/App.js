@@ -6,6 +6,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import List from './components/pages/List';
+import Profile from './components/pages/Profile';
 import Matches from './components/pages/Matches';
 import Footer from './components/Footer';
 
@@ -46,6 +47,7 @@ class App extends Component {
             <Route path='/' exact component={Home} />
                 <Route path='/list' component={List} />
                 <Route path='/matches' component={Matches} />
+                <Route path='/profile' component={Profile} />
             </Switch>
             </Router>
           </>

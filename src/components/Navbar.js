@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import firebase from "firebase"
 
 
 function Navbar() {
@@ -68,9 +67,6 @@ function Navbar() {
               >
                 Profile
               </Link>
-            </li>
-            <li className='nav-item'>
-            <button className='nav-links' onClick={() => firebase.auth().signOut()}>Sign out</button>
             </li>
           </ul>
         </div>
