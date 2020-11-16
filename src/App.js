@@ -10,7 +10,6 @@ import Matches from './components/pages/Matches';
 import Footer from './components/Footer';
 
 firebase.initializeApp({
-
   apiKey: "AIzaSyBeQ1OlPOh5wUyyyFj2IwyW16KXFYY2ESg",
   authDomain: "pawmates-72d84.firebaseapp.com",
   databaseURL: "https://pawmates-72d84.firebaseio.com"
@@ -60,10 +59,14 @@ class App extends Component {
             />
           </span>*/
         ) : (
+          <div>
+            <h1>Welcome To Pawmates</h1>
+            <h2>Sign in to find your pur-fect match</h2>
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
             firebaseAuth={firebase.auth()}
           />
+          </div>
         )}
       </div>
     )

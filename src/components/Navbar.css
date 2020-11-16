@@ -1,10 +1,10 @@
 .nav-logo {
     height: 3rem;
     width: 3rem;
-    display: block;  }
+    display: block;  
+}
 .navbar {
     background: #000000;
-    opacity: 80%;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -14,9 +14,17 @@
     top: 0;
     z-index: 999;
 }
-
+.navbar-container button{
+    height: 80px;
+    max-width: 1500px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navbar-container {
     display: flex;
+    background: black;
     justify-content: center;
     align-items: center;
     height: 80px;
@@ -33,7 +41,17 @@
     display: flex;
     align-items: center;
 }
-
+.navbar-logo:hover{
+    color: rgb(214, 214, 214);
+}
+.nav-item button{
+    background: black;
+    font-size: 1.2rem;
+    border: #000;
+}
+.nav-item button:hover{
+    color: rgb(214, 214, 214);
+}
 .fa-typo3 {
     margin-left: 0.5rem;
     font-size: 1.8rem;
@@ -63,9 +81,11 @@
     height: 100%;
 }
 
-.nav-links:hover {
+
+.nav-links:hover, .navbar-container button:hover {
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
+    color: rgb(214, 214, 214);
 }
 
 .fa-bars {
@@ -84,10 +104,6 @@
     .NavbarItems {
         position: relative;
     }
-    /*.nav-logo {
-        float: left;
-        margin-top: -25px;
-      }*/
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -107,7 +123,6 @@
         transition: all 0.5s ease;
         z-index: 1;
     }
-
     .nav-links {
         text-align: center;
         padding: 2rem;
@@ -115,7 +130,7 @@
         display: table;
     }
 
-    .nav-links:hover {
+    .nav-links:hover, .navbar-container button {
         background-color: #fff;
         color: #000000;
         border-radius: 0;
@@ -127,7 +142,10 @@
         left: 0;
         transform: translate(25%, 50%);
     }
-
+    .navbar-container button{
+        background: #242222;
+    color:white;
+    }
     .menu-icon {
         display: block;
         position: absolute;
@@ -158,7 +176,7 @@
         transition: all 0.3s ease-out;
     }
 
-    .nav-links-mobile:hover {
+    .nav-links-mobile:hover, .navbar-container button:hover {
         background: #fff;
         color: #000000;
         transition: 250ms;
