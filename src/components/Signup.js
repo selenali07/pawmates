@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import { Container } from "react-bootstrap"
 
 export default function Signup() {
   const emailRef = useRef()
@@ -33,6 +34,12 @@ export default function Signup() {
 
   return (
     <>
+        <div className = 'hero-container'>
+    <Container
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "420px" }}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
@@ -50,7 +57,7 @@ export default function Signup() {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} disabled={loading} className="w-100" type="submit">
               Sign Up
             </Button>
           </Form>
@@ -58,6 +65,9 @@ export default function Signup() {
       </Card>
       <div className="w-100 text-center mt-2">
         Already have an account? <Link to="/login">Log In</Link>
+      </div>
+      </div>
+      </Container>
       </div>
     </>
   )

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
+import { Container } from "react-bootstrap"
 
 export default function ForgotPassword() {
   const emailRef = useRef()
@@ -18,7 +19,7 @@ export default function ForgotPassword() {
       setError("")
       setLoading(true)
       await resetPassword(emailRef.current.value)
-      setMessage("Check your inbox for further instructions")
+      setMessage("Check your email for further steps")
     } catch {
       setError("Failed to reset password")
     }
@@ -28,6 +29,12 @@ export default function ForgotPassword() {
 
   return (
     <>
+    <div className = 'hero-container'>
+    <Container
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "420px" }}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Password Reset</h2>
@@ -38,7 +45,7 @@ export default function ForgotPassword() {
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} disabled={loading} className="w-100" type="submit">
               Reset Password
             </Button>
           </Form>
@@ -50,6 +57,9 @@ export default function ForgotPassword() {
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
+    </div>
+    </Container>
+    </div>
     </>
   )
 }

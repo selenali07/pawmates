@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import { Container } from "react-bootstrap"
 
 export default function Login() {
   const emailRef = useRef()
@@ -28,6 +29,12 @@ export default function Login() {
 
   return (
     <>
+    <div className = 'hero-container'>
+    <Container
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "420px" }}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -41,7 +48,7 @@ export default function Login() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} disabled={loading} className="w-100" type="submit">
               Log In
             </Button>
           </Form>
@@ -52,6 +59,9 @@ export default function Login() {
       </Card>
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
+      </div>
+      </div>
+      </Container>
       </div>
     </>
   )
