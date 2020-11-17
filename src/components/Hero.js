@@ -1,7 +1,5 @@
 import React from 'react'
-import '../App.css';
 import'./Hero.css';
-import firebase from "firebase"
 import './Navbar.css';
 
 function Hero() {
@@ -10,7 +8,7 @@ function Hero() {
             <div className = 'hero-items'>
                 <h1>Welcome to Paw Mates</h1>
                 <p>Find the perfect pet for you!</p>
-                <input type="text" className="input" placeholder="Location"/>
+                <input type='text' className='input' placeholder='Location'/>
                 <button className='mt-3 is-pulled-right'>Search</button>
             </div>
         </div>

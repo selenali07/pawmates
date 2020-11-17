@@ -1,15 +1,28 @@
-
-import React from 'react';
-import '../../App.css';
+import React, { useState } from "react"
+import { Card, Button, Alert } from "react-bootstrap"
+import { useAuth } from "../../contexts/AuthContext"
+import { Link, useHistory } from "react-router-dom"
 import Hero from '../Hero';
-import Footer from '../Footer';
 
-function Home() {
-    return(
-        <>
-        <Hero />
-        <Footer />
-        </>
-    )
+export default function Home() {
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const history = useHistory()
+
+  async function handleLogout() {
+    setError("")
+
+    try {
+      await logout()
+      history.push("/login")
+    } catch {
+      setError("Error logging out")
+    }
+  }
+
+  return (
+    <>
+    <Hero />
+    </>
+  )
 }
-export default Home;

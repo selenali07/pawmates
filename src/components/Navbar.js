@@ -26,43 +26,43 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          <img className = "nav-logo" src= {'/images/pawlogo.png'} alt = "logo"/>
+      <nav className='nav'>
+        <div className='navcontainer'>
+          <Link to='/' className='navlogo' onClick={closeMobileMenu}>
+          <img className = 'navlogo' src= {'/images/pawlogo.png'} alt = 'logo'/>
           Paw-Mates
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className='menuicon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <li className='navitem'>
+              <Link to='/' className='navlinks' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='navitem'>
               <Link
                 to='/list'
-                className='nav-links'
+                className='navlinks'
                 onClick={closeMobileMenu}
               >
                 List
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='navitem'>
               <Link
                 to='/matches'
-                className='nav-links'
+                className='navlinks'
                 onClick={closeMobileMenu}
               >
                 Matches
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='navitem'>
               <Link
                 to='/profile'
-                className='nav-links'
+                className='navlinks'
                 onClick={closeMobileMenu}
               >
                 Profile
