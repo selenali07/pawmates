@@ -13,9 +13,6 @@ const {posts, setPost} = useState([]);
 const [count, setCount] = useState(1);
 const [count_2, setCount_2] = useState(0);
 const history = useHistory();
-let array = {};
-let array2 = [];
-let list = {};
 const id = currentUser.uid;
 
 useEffect(()=>{
