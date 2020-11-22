@@ -4,24 +4,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 0;
+    width: 100%;
   }
   .sociallogo:hover{
     text-decoration: none;
     color: white;
   }
   
-  /* Social Icons */
-  .social-icon-link {
+  .socialLink {
     color: #fff;
     font-size: 24px;
   }
   
-  .social-media {
+  .socialMedia {
     max-width: 1000px;
     width: 100%;
   }
   
-  .social-media-wrap {
+  .socialMedia-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +71,7 @@
       flex-direction: column;
     }
   
-    .social-media-wrap {
+    .socialMedia-wrap {
       flex-direction: column;
     }
   }

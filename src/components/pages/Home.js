@@ -8,18 +8,7 @@ export default function Home() {
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
   const history = useHistory()
-
-  async function handleLogout() {
-    setError("")
-
-    try {
-      await logout()
-      history.push("/login")
-    } catch {
-      setError("Error logging out")
-    }
-  }
-
+  
   return (
     <>
     <Hero />

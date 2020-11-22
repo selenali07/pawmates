@@ -52,14 +52,15 @@ export default function Login() {
               Log In
             </Button>
           </Form>
-          <div className="w-100 text-center mt-3">
+          <div className="w-90 text-center mt-3">
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
+          <hr></hr>
+          <div className="w-90 text-center mt-2">Need An Account? <Link to="/signup">Sign Up Now!</Link>
+      </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
-      </div>
+      
       </div>
       </Container>
       </div>

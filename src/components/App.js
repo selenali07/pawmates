@@ -13,14 +13,17 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import Footer from './Footer';
 import Navbar from './Navbar';
+
 Window.value = {
 animal: "dog",
-location: 27514
+location: 27514,
 }
+
 function App() {
 return (
     <div>
       <Router>
+      <div style={{minHeight: "calc(100vh - 40px)"}}>
       <Navbar />
         <AuthProvider>
           <Switch>
@@ -34,6 +37,7 @@ return (
             <Route path="/forgot-password" component={ForgotPassword} />
           </Switch>
         </AuthProvider>
+        </div>
         <Footer />
       </Router>
     </div>
