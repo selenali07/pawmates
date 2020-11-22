@@ -11,7 +11,6 @@ export default function Profile() {
 
   async function handleLogout() {
     setError("")
-
     try {
       await logout()
       history.push("/login")
@@ -22,7 +21,7 @@ export default function Profile() {
 
   return (
     <>
- <Container
+  <Container
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
     >
@@ -32,7 +31,7 @@ export default function Profile() {
           <h2 className="text-center mb-4">Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email:</strong> {currentUser.email}
-          <Link  style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} to="/update-profile" className="btn btn-primary w-100 mt-3">
+          <Link style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} to="/update-profile" className="btn btn-primary w-100 mt-3">
             Update Profile
           </Link>
         </Card.Body>

@@ -13,28 +13,30 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import Footer from './Footer';
 import Navbar from './Navbar';
-
-function App() {
-  return (
-      <div>
-        <Router>
-        <Navbar />
-          <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={Home} />
-              <PrivateRoute exact path="/profile" component={Profile} />
-              <PrivateRoute  path='/list' component={List} />
-              <PrivateRoute  path='/matches' component={Matches} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/forgot-password" component={ForgotPassword} />
-            </Switch>
-          </AuthProvider>
-          <Footer />
-        </Router>
-      </div>
-  )
+Window.value = {
+animal: "dog",
+location: 27514
 }
-
+function App() {
+return (
+    <div>
+      <Router>
+      <Navbar />
+        <AuthProvider>
+          <Switch>
+            <PrivateRoute exact path="/" component={Home} />
+            <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute  path='/list' component={List} />
+            <PrivateRoute  path='/matches' component={Matches} />
+            <PrivateRoute path="/update-profile" component={UpdateProfile} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgot-password" component={ForgotPassword} />
+          </Switch>
+        </AuthProvider>
+        <Footer />
+      </Router>
+    </div>
+)
+}
 export default App
