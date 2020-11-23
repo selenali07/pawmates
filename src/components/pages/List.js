@@ -72,9 +72,9 @@ return (
        </div>
      </div>
      <div className="card-footer">
-       <a href="#" className="card-footer-item" onClick={getBack}><img  style={{width: '4.2vw'}}  src= {'/images/left.png'} alt = 'logo'/></a>
-       <a href="#" className="card-footer-item" onClick = {dislike}><img  style={{width: '4vw'}} className = 'heartlogo' src= {'/images/x.png'} alt = 'logo'/></a>
-       <a href="#" className="card-footer-item" onClick={getCalc}><img  style={{width: '4vw'}}  src= {'/images/right.png'} alt = 'logo'/></a>
+       <a href="#" className="card-footer-item" onClick={getBack}><img  style={{width: '4.2vw'}}  src= {'https://i.ibb.co/dpT45Bh/left.png'} alt = 'logo'/></a>
+       <a href="#" className="card-footer-item" onClick = {dislike}><img  style={{width: '4vw'}} className = 'heartlogo' src= {'https://i.ibb.co/y54FDVL/x.png'} alt = 'logo'/></a>
+       <a href="#" className="card-footer-item" onClick={getCalc}><img  style={{width: '4vw'}}  src= {'https://i.ibb.co/P66sfWp/right.png'} alt = 'logo'/></a>
      </div>
    </Card>
  </article>

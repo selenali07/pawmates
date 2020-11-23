@@ -1,0 +1,37 @@
+.maps {
+   display: flex;
+   flex-direction: row;
+   height: auto;
+}
+ 
+#side-scroll {
+   flex: 20%;
+   text-align: center;
+}
+ 
+#paw-fect {
+   margin: 5%;
+   height: 80vh;
+   overflow: auto;
+}
+/*
+#paw-tentially {
+   margin: 5%;
+   height: 40vh;
+   overflow: auto;
+} */
+ 
+#explore {
+   position: relative;
+   flex: 80%;
+}
+ 
+.searchbox input{
+   position: absolute;
+   top: 2%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   max-width: 300px;
+   z-index: 10;
+}

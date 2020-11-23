@@ -13,6 +13,8 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import Footer from './Footer';
 import Navbar from './Navbar';
+import Maps from "./pages/Maps"
+
 
 Window.value = {
 animal: "dog",
@@ -31,6 +33,7 @@ return (
             <PrivateRoute exact path="/profile" component={Profile} />
             <PrivateRoute  path='/list' component={List} />
             <PrivateRoute  path='/matches' component={Matches} />
+            <PrivateRoute  path='/maps' component={Maps} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />

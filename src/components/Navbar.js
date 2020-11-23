@@ -58,6 +58,15 @@ function Navbar() {
               </Link>
             </li>
             <li className='navitem'>
+             <Link
+               to='/maps'
+               className='navlinks'
+               onClick={closeMobileMenu}
+             >
+               Maps
+             </Link>
+           </li>
+            <li className='navitem'>
               <Link
                 to='/profile'
                 className='navlinks'
