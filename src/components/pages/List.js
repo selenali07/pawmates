@@ -29,11 +29,9 @@ useEffect(()=>{
   });
   return ()=> upload.off('value',listener);
  },[firebase.database()]);
- console.log("tasks",tasks);
 const getCalc = async()=>{
   setCount(count +1);
   setCount_2(count_2+1);
-  console.log(tasks.length)
   if(count === tasks.length){
     setCount(1);
     setCount_2(0);
