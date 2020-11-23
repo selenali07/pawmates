@@ -29,8 +29,8 @@ return (
           <Switch>
             <PrivateRoute exact path="/" component={Home} />
             <PrivateRoute exact path="/profile" component={Profile} />
-            <PrivateRoute path='/list' component={List} />
-            <PrivateRoute path='/matches' component={Matches} />
+            <PrivateRoute  path='/list' component={List} />
+            <PrivateRoute  path='/matches' component={Matches} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
