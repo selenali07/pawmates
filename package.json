@@ -42,21 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/selenali07/pawmates.git"
-  },
-  "engines": {
-    "npm": "6.x"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/selenali07/pawmates/issues"
-  },
-  "homepage": "https://github.com/selenali07/pawmates#readme",
-  "description": ""
+  }
 }
