@@ -20,6 +20,7 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,15 +44,10 @@
   },
   "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/selenali07/pawmates.git"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/selenali07/pawmates/issues"
   },
-  "homepage": "https://github.com/selenali07/pawmates#readme",
   "description": ""
 }
