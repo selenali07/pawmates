@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Card, Button, Alert, Container } from "react-bootstrap"
+import { Card, Button, Alert, Container, Row, Col} from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import firebase from "firebase"
@@ -56,9 +56,7 @@ const getCalc = async()=>{
 return (
  <>
  <h1 className = "has-text-centered m-4">Here is Your List of Likes!</h1>
- <p className = "has-text-centered mb-4">Visit 
- <a href="/matches"> Matches </a>page to fill your list</p>
- <p className = "has-text-centered mb-4"> Narrow Down Your Furry Friends</p>
+ <p className = "has-text-centered mb-2">Narrow Down Your Furry Friends! Visit <a href="/matches"> Matches </a>page to fill your list</p>
  <Container>
  {tasks.slice(count_2,count).map((user) =>(
    <article id = {user.id} key={user}>
@@ -67,7 +65,7 @@ return (
        <div className="col-md-5"><img style={{ width: '500px', height:'500px'}}src={user.Photo}/></div>
        <div className="col-md-7">
          <div className="card-body">
-           <h1 className="title is-1">{user.Name}</h1> 
+           <h1 className="title is-1">{user.Name} {"("+user.like+")"}</h1> 
            <h3 className="subtitle is-3">{user.Gender} : {user.Age}</h3>
            <div><strong>Location: </strong>{user.City} {user.State}, {user.Zip}</div>       
            <div><strong>Status:</strong> {user.Status}</div>
@@ -82,8 +80,24 @@ return (
        <a href="#" className="card-footer-item" onClick={getCalc}><img  style={{width: '4vw'}}  src= {'/images/right.png'} alt = 'logo'/></a>
      </div>
    </Card>
-   
- </article>))}
+ </article>
+ ))
+ }
+ {/*<div className="has-text-centered">
+   Pawtentially
+ </div>
+ <ul>
+ {tasks.filter((user) => user.like == "Pawtentially").map((user) =>
+  <article id = {user.id} key={user}>
+  <li>
+  <Card>
+  <div className="row no-gutters">
+  <img style={{ width: '200px', height:'200px'}}src={user.Photo}/>
+  <h1>{user.Name}</h1></div></Card></li>
+  </article>)
+
+
+ }</ul>*/}
  </Container>
  </>
 )

@@ -46,7 +46,7 @@ const data_2 = await api.json();
 updatePets(data_2.animals.filter( array => (array.species == "Cat" || array.species == "Dog") && array.photos[0] != null));
 setSendRequest(false);
 };
- getData();
+getData().catch((TypeError)=> (alert("Enter valid zipcode"), history.push('/')));
 },[]);
 const getNext = async()=>{
 setCount(count +1);
@@ -83,8 +83,37 @@ if(count == pets.length){
    "Photo": pets[count_2].photos[0].full,
    "Status":pets[count_2].status,
    "url": pets[count_2].url,
+   "like": "Future Pawmate?"
  })
 }
+const maybe = async()=>{
+  console.log("user", currentUser)
+  const user  = firebase.auth().currentUser;
+  const id = currentUser.uid;
+  const tag = uuid()
+  setCount(count +1);
+ setCount_2(count_2+1);
+ if(count == pets.length){
+   alert("end of matches")
+   history.push('/list')
+ }
+ 
+  firebase.database().ref('users/'+id).child(pets[count_2].id).set({
+   "ID" : pets[count_2].id,
+    "Name" : pets[count_2].name,
+    "Gender": pets[count_2].gender,
+    "Age": pets[count_2].age,
+    "City": pets[count_2].contact.address.city,
+    "State": pets[count_2].contact.address.state,
+    "Zip": pets[count_2].contact.address.postcode,
+    "Breed": pets[count_2].breeds.primary,
+    "Description": pets[count_2].description,
+    "Photo": pets[count_2].photos[0].full,
+    "Status":pets[count_2].status,
+    "url": pets[count_2].url,
+    "like": "Pawtentially"
+  })
+ }
 
 return (
  <>
@@ -95,7 +124,7 @@ return (
  {pets.slice(count_2,count).map((user) =>(
    <article id = {user.id} key={user}> 
    <Container>
-   <Card className="mb-3" style={{width: '100vw'}}>
+   <Card className="mb-6" style={{width: '100vw'}}>
      <div className="row no-gutters">
        <div className="col-md-5"><img style={{ width: '500px', height:'500px'}}src={user.photos[0].full}/></div>
        <div className="col-md-7">
@@ -107,11 +136,15 @@ return (
            <p className = "is 3">{user.name} is a {user.breeds.primary}. {user.description}</p>
            <a href={user.url}>More Info!</a>
          </div>
-       </div>
+</div>
+       
      </div>
      <div className="card-footer">
+     <a href="#" className="card-footer-item" onClick={getNext}><img  style={{width: '4vw'}} className = 'xlogo' src= {'/images/x.png'} alt = 'logo'/></a>
+
        <a href="#" className="card-footer-item" onClick = {like}><img  style={{width: '4vw'}} className = 'heartlogo' src= {'/images/heart.png'} alt = 'logo'/></a>
-       <a href="#" className="card-footer-item" onClick={getNext}><img  style={{width: '4vw'}} className = 'xlogo' src= {'/images/x.png'} alt = 'logo'/></a>
+       <a href="#" className="card-footer-item" onClick = {maybe}><img  style={{width: '4vw'}} className = 'heartlogo' src= {'/images/maybe.png'} alt = 'logo'/></a>
+
      </div>
    </Card>
    </Container>
