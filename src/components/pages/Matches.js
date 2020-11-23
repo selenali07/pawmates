@@ -112,8 +112,10 @@ if(count == pets.length){
      "Breed": pets[count_2].breeds.primary,
      "Description": pets[count_2].description,
      "Photo": pets[count_2].photos[0].full,
-     "Status":pets[count_2].status,
+     "email": pets[count_2].contact.email,     
+     "phone": pets[count_2].contact.phone, 
      "url": pets[count_2].url,
+     "Status":pets[count_2].status,
      "like": "Purfection",
      "lng": await initLoc(pets[count_2].contact.address.city, pets[count_2].contact.address.state, pets[count_2].contact.address.postcode, "lng"),  //added
      "lat": await initLoc(pets[count_2].contact.address.city, pets[count_2].contact.address.state, pets[count_2].contact.address.postcode, "lat"),  //added
@@ -139,6 +141,8 @@ setCount_2(count_2+1);
       "Description": pets[count_2].description,
       "Photo": pets[count_2].photos[0].full,
       "Status":pets[count_2].status,
+      "email": pets[count_2].contact.email,     
+      "phone": pets[count_2].contact.phone, 
       "url": pets[count_2].url,
       "like": "Pawtentially",
       "lng": await initLoc(pets[count_2].contact.address.city, pets[count_2].contact.address.state, pets[count_2].contact.address.postcode, "lng"),  //added

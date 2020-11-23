@@ -1,26 +1,27 @@
 import React from 'react'
-// import '../App.css'
 import './Hero.css'
 import './Navbar.css'
- 
+import './MatchComponent.css'
+import { Card} from "react-bootstrap"
+
 const SECTION = ['']
  
 export const MatchComponent = (props) => {
    return (
        <>
-       <div className="card">
-       <div className="card-body">
-       <h1>{props.name}</h1>
-       <h4>{props.city}, {props.state}</h4>
-       <ul className="is-centered">
-       <li><strong>Interest: </strong>{props.status}</li>
-           <li><strong>Breed: </strong>{props.breed}</li>
-           <li><div>{props.age} | {props.gender}</div></li>
-          </ul></div>
-           <a href={props.adopt}>Adopt Me!</a>
-       </div>
-       <br></br>
-</>
+       <Card>
+       <Card.Body>
+           <h1 className="text-is-centered">{props.name}</h1>
+           <h4 className="text-is-centered">{props.like}</h4>
+        <img src={props.photo}/>
+           <p className="text-is-centered">{props.breed}</p>
+           <p className="text-is-centered">{props.gender} | {props.age}</p>
+           <p className="text-is-centered">{props.email}</p>
+           <p className="text-is-centered">{props.phone}</p>
+           <a href={props.url}>Adopt me!</a>
+           </Card.Body>
+       </Card>
+       <br></br></>
    )
 }
  

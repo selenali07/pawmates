@@ -1,0 +1,41 @@
+.match-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+    margin: 5%;
+    height: 30vh;
+    min-height: 220px;
+ }
+  
+ #flex-name {
+    flex: 20%;
+    font-weight: bold;
+ }
+  
+ #flex-gender {
+    flex: 10%;
+ }
+  
+ #flex-age {
+    flex: 10%;
+ }
+  
+ #flex-breed {
+    flex: 10%;
+ }
+  
+ #flex-photo {
+    position: relative;
+    flex: 50%;
+ }
+ #flex-photo > #petPhoto {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%)
+ }
+ 

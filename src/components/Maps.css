@@ -14,13 +14,6 @@
    height: 80vh;
    overflow: auto;
 }
-/*
-#paw-tentially {
-   margin: 5%;
-   height: 40vh;
-   overflow: auto;
-} */
- 
 #explore {
    position: relative;
    flex: 80%;
@@ -34,4 +27,10 @@
    width: 100%;
    max-width: 300px;
    z-index: 10;
+}
+ 
+ 
+#picMarker {
+   max-height: 300px;
+   max-width: 300px
 }
