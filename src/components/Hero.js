@@ -51,7 +51,7 @@ class Hero extends Component {
                        <option value="dog">Dogs</option>
                        <option value="cat">Cats</option>
                    </select>
-                   <button style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} type = "submit"className='mt-3 is-pulled-right' ><Link to = "./Matches">Search</Link></button>
+                   <button style={{color:"#000000", backgroundColor: "#CCFFCC", borderColor: "#CCFFCC"}} type = "submit"className='btn mt-3 is-pulled-right' ><Link to = "./Matches">Search</Link></button>
                </form>
            </div>
        </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, useHistory } from "react-router-dom"
-import { useAuth } from "../../contexts/AuthContext"
+import { useAuth } from "../contexts/AuthContext"
 import {v4 as uuid} from "uuid"
 import firebase from "firebase"
 import {

@@ -7,6 +7,7 @@ const SECTION = ['']
  
 export const MatchComponent = (props) => {
    return (
+       <>
        <div className="card">
        <div className="card-body">
        <h1>{props.name}</h1>
@@ -14,10 +15,12 @@ export const MatchComponent = (props) => {
        <ul className="is-centered">
        <li><strong>Interest: </strong>{props.status}</li>
            <li><strong>Breed: </strong>{props.breed}</li>
-           <li>{props.gender}</li>
-           <li>{props.age}</li></ul></div>
+           <li><div>{props.age} | {props.gender}</div></li>
+          </ul></div>
            <a href={props.adopt}>Adopt Me!</a>
        </div>
+       <br></br>
+</>
    )
 }
  

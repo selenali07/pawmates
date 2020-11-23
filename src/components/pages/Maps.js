@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import MatchComponent from '../MatchComponent'
-import './Maps.css'
+import '../Maps.css'
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from "../../contexts/AuthContext"
 import {v4 as uuid} from "uuid"
 import firebase from "firebase"
-import Search from './Search'
+import Search from '../Search'
 import {
    GoogleMap,
    useLoadScript,
@@ -45,8 +45,6 @@ export default function Maps() {
    const [coor, setCoor] = useState([])
    const [center, setCenter] = useState([])
  
- 
- 
    useEffect(()=>{
        const fetch = [];
        const coordArr = []
@@ -81,8 +79,8 @@ export default function Maps() {
        }
   
        const defaultCenter = {
-           lat: 29.431585,
-           lng: 106.912254,
+        lat: 29.431585,
+        lng: 106.912254,
        }
  
        const options = {

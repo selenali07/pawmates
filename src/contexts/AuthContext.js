@@ -2,7 +2,9 @@ import React, { useContext, useState, useEffect } from "react"
 import { auth } from "../firebase"
 
 const AuthContext = React.createContext()
-
+//https://www.youtube.com/watch?v=PKwu15ldZ7k&t=1872s
+//used tutorial as a resource for creating firebase login
+//https://firebase.google.com/docs/auth/web/password-auth
 export function useAuth() {
   return useContext(AuthContext)
 }

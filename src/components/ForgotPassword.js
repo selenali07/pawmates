@@ -58,7 +58,6 @@ export default function ForgotPassword() {
       </div>
         </Card.Body>
       </Card>
-
     </div>
     </Container>
     </div>

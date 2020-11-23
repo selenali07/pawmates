@@ -80,21 +80,6 @@ return (
  </article>
  ))
  }
- {/*<div className="has-text-centered">
-   Pawtentially
- </div>
- <ul>
- {tasks.filter((user) => user.like == "Pawtentially").map((user) =>
-  <article id = {user.id} key={user}>
-  <li>
-  <Card>
-  <div className="row no-gutters">
-  <img style={{ width: '200px', height:'200px'}}src={user.Photo}/>
-  <h1>{user.Name}</h1></div></Card></li>
-  </article>)
-
-
- }</ul>*/}
  </Container>
  </>
 )
