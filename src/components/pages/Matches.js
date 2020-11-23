@@ -1,6 +1,7 @@
 import firebase from "firebase"
-import React, { useState, useEffect, useRef} from "react";
-import { Card, Container} from "react-bootstrap"
+import {v4 as uuid} from "uuid"
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Card, Container, Col, Button, Alert, Row } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 function Matches() {
@@ -58,7 +59,10 @@ if(count == pets.length){
 
  
 const like = async()=>{
+ console.log("user", currentUser)
+ const user  = firebase.auth().currentUser;
  const id = currentUser.uid;
+ const tag = uuid()
  setCount(count +1);
 setCount_2(count_2+1);
 if(count == pets.length){
@@ -83,7 +87,10 @@ if(count == pets.length){
  })
 }
 const maybe = async()=>{
+  console.log("user", currentUser)
+  const user  = firebase.auth().currentUser;
   const id = currentUser.uid;
+  const tag = uuid()
   setCount(count +1);
  setCount_2(count_2+1);
  if(count == pets.length){
