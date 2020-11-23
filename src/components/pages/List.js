@@ -3,8 +3,7 @@ import { Card, Button, Alert, Container, Row, Col} from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import firebase from "firebase"
-import { faTasks } from "@fortawesome/free-solid-svg-icons"
-// import { async } from "q"
+
 function List() {
 const [error, setError] = useState("");
 const { currentUser, logout } = useAuth();
