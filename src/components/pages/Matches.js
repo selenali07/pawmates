@@ -59,7 +59,6 @@ if(count == pets.length){
 
  
 const like = async()=>{
- console.log("user", currentUser)
  const user  = firebase.auth().currentUser;
  const id = currentUser.uid;
  const tag = uuid()
@@ -87,7 +86,6 @@ if(count == pets.length){
  })
 }
 const maybe = async()=>{
-  console.log("user", currentUser)
   const user  = firebase.auth().currentUser;
   const id = currentUser.uid;
   const tag = uuid()
