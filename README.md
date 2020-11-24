@@ -5,4 +5,8 @@ Upon entering the application, users are prompted with an option to sign in or c
 users will have the option to choose the location and type of pet. Visit matches page to iterate through a list of potential pawmates, 
 then view saved matches in list or map section.
 
-## NPM RUN BUILD + NPM START
+- Run: NPM RUN BUILD & NPM START to launch app
+
+### FIREBASE AND REACT RESOURCES: 
+- https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial#react-router-for-firebase-auth
+- https://www.youtube.com/watch?v=PKwu15ldZ7k&t=1872s
