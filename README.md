@@ -4,3 +4,5 @@ We utilized the PetFinder API to pull a database of adoptable pets and the Geoco
 Upon entering the application, users are prompted with an option to sign in or create an account. After signing in,
 users will have the option to choose the location and type of pet. Visit matches page to iterate through a list of potential pawmates, 
 then view saved matches in list or map section.
+
+## NPM RUN BUILD + NPM START
